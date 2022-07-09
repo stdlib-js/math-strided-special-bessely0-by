@@ -32,38 +32,30 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-strided-special-bessely0-by
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-bessely0By = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-bessely0-by@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var bessely0By = require( 'path/to/vendor/umd/math-strided-special-bessely0-by/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-bessely0-by@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.bessely0By;
-})();
-</script>
+var bessely0By = require( '@stdlib/math-strided-special-bessely0-by' );
 ```
 
 #### bessely0By( N, x, strideX, y, strideY, clbk\[, thisArg] )
@@ -225,15 +217,10 @@ bessely0By.ndarray( 3, x, 2, 1, y, -1, y.length-1, accessor );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-bessely0-by@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var uniform = require( '@stdlib/random-base-uniform' );
+var filledarray = require( '@stdlib/array-filled' );
+var bessely0By = require( '@stdlib/math-strided-special-bessely0-by' );
 
 function accessor( v, i ) {
     if ( (i%3) === 0 ) {
@@ -255,11 +242,6 @@ console.log( y );
 
 bessely0By.ndarray( x.length, x, 1, 0, y, -1, y.length-1, accessor );
 console.log( y );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -313,8 +295,8 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/math-strided-special-bessely0-by.svg
 [npm-url]: https://npmjs.org/package/@stdlib/math-strided-special-bessely0-by
 
-[test-image]: https://github.com/stdlib-js/math-strided-special-bessely0-by/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/math-strided-special-bessely0-by/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/math-strided-special-bessely0-by/actions/workflows/test.yml/badge.svg?branch=v0.0.7
+[test-url]: https://github.com/stdlib-js/math-strided-special-bessely0-by/actions/workflows/test.yml?query=branch:v0.0.7
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/math-strided-special-bessely0-by/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/math-strided-special-bessely0-by?branch=main
@@ -347,7 +329,7 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/math/base/special/bessely0]: https://github.com/stdlib-js/math-base-special-bessely0/tree/umd
+[@stdlib/math/base/special/bessely0]: https://github.com/stdlib-js/math-base-special-bessely0
 
 </section>
 
