@@ -43,38 +43,32 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-strided-special-bessely0-by
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-bessely0By = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-bessely0-by@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var bessely0By = require( 'path/to/vendor/umd/math-strided-special-bessely0-by/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-bessely0-by@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.bessely0By;
-})();
-</script>
+var bessely0By = require( '@stdlib/math-strided-special-bessely0-by' );
 ```
 
 #### bessely0By( N, x, strideX, y, strideY, clbk\[, thisArg] )
@@ -236,13 +230,8 @@ bessely0By.ndarray( 3, x, 2, 1, y, -1, y.length-1, accessor );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {.factory;
+```javascript
+var uniform = require( '@stdlib/random-base-uniform' ).factory;
 var filledarray = require( '@stdlib/array-filled' );
 var filledarrayBy = require( '@stdlib/array-filled-by' );
 var bessely0By = require( '@stdlib/math-strided-special-bessely0-by' );
@@ -263,11 +252,6 @@ console.log( y );
 
 bessely0By.ndarray( x.length, x, 1, 0, y, -1, y.length-1, accessor );
 console.log( y );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -277,6 +261,14 @@ console.log( y );
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
 <section class="related">
+
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/math-strided/special/besselj0-by`][@stdlib/math/strided/special/besselj0-by]</span><span class="delimiter">: </span><span class="description">compute the Bessel function of the first kind of order zero for each element retrieved from an input strided array via a callback function.</span>
+-   <span class="package-name">[`@stdlib/math-strided/special/besselj1-by`][@stdlib/math/strided/special/besselj1-by]</span><span class="delimiter">: </span><span class="description">compute the Bessel function of the first kind of order one for each element retrieved from an input strided array via a callback function.</span>
+-   <span class="package-name">[`@stdlib/math-strided/special/bessely1-by`][@stdlib/math/strided/special/bessely1-by]</span><span class="delimiter">: </span><span class="description">compute the Bessel function of the second kind of order one for each element retrieved from an input strided array via a callback function.</span>
 
 </section>
 
@@ -358,7 +350,17 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/math/base/special/bessely0]: https://github.com/stdlib-js/math-base-special-bessely0/tree/umd
+[@stdlib/math/base/special/bessely0]: https://github.com/stdlib-js/math-base-special-bessely0
+
+<!-- <related-links> -->
+
+[@stdlib/math/strided/special/besselj0-by]: https://github.com/stdlib-js/math-strided-special-besselj0-by
+
+[@stdlib/math/strided/special/besselj1-by]: https://github.com/stdlib-js/math-strided-special-besselj1-by
+
+[@stdlib/math/strided/special/bessely1-by]: https://github.com/stdlib-js/math-strided-special-bessely1-by
+
+<!-- </related-links> -->
 
 </section>
 
